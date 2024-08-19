@@ -12,10 +12,12 @@ console.log(input);
   const hour=Math.floor((diff/3600)%24);
   const minutes=Math.floor((diff/60)%60);
   const seconds=Math.floor((diff)%60);
-  input[0].value=day;
-  input[1].value=hour;
-  input[2].value=minutes;
+  if(day>0){
+  input[0].value=time(day);
+  input[1].value=time(hour);
+  input[2].value=time(minutes);
   input[3].value=time(seconds);
+  }
  }
  clock();
 
